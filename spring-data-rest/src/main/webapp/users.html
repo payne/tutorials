@@ -43,9 +43,11 @@ a {
 		<br /> 
 		<a ng-click="getAllUsers()">Get all Users</a><br /> 
 		<br /> <br />
-		<div ng-repeat="usr in users">
-			{{usr.name}} {{usr.email}}
-		</div>
+		<!-- Why does this line not work?? -->
+		<table border=2> 
+		<tr ng-repeat="usr in users"> <td> {{usr.name}} </td><td> {{usr.email}} </td> </div> </table>
+		<hr/>
+		<div ng-repeat="usr in users">{{usr.name}} {{usr.email}}</div>
 	</div>
 </body>
 </html>
